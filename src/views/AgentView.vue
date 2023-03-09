@@ -4,10 +4,15 @@
   export default {
     components: {
       FetchAgents
+    },
+    methods: {
+      recievedEvent(payload) {
+        console.log(payload)
+      }
     }
   }
 </script>
 
 <template>
-  <FetchAgents />
+  <FetchAgents @log-this="recievedEvent" />
 </template>
