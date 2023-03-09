@@ -1,13 +1,13 @@
 <script>
-  import Landing from '../components/Home/Landing.vue'
+  import LandingPage from '../components/Home/LandingPage.vue'
 
   export default {
     components: {
-      Landing
+      LandingPage
     }
   }
 </script>
 
 <template>
-  <Landing />
+  <LandingPage />
 </template>

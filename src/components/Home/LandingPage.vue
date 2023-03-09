@@ -37,7 +37,7 @@
       build for a school assignment. Please note that some links are just
       placeholders for now. Enjoy :)
     </p>
-    <template v-for="image in pictureArray">
+    <template :key="image.id" v-for="image in pictureArray">
       <div id="wide-art">
         <img :src="image.wideArt" />
       </div>

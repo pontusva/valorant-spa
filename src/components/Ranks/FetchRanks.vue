@@ -10,7 +10,11 @@
 <template>
   <template v-if="ranks">
     <div id="wrappers">
-      <div style="text-align: center" v-for="tier in ranks.tiers">
+      <div
+        style="text-align: center"
+        :key="tier.tier"
+        v-for="tier in ranks.tiers"
+      >
         <div :style="{ backgroundColor: '#' + tier.backgroundColor }">
           <p :style="{ color: '#' + tier.color }">{{ tier.tierName }}</p>
         </div>

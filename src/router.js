@@ -9,8 +9,6 @@ import WeaponsView from './views/WeaponsView.vue'
 import GearView from './views/GearView.vue'
 import DetailsView from './views/agentsView/DetailsView.vue'
 import MapsViewDetails from './components/Map/MapsViewDetails.vue'
-import InProgressView from './views/InProgressView.vue'
-import WorkInProgress from './components/InProgress/WorkInProgress.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -54,11 +52,6 @@ export default createRouter({
     {
       component: MapsViewDetails,
       path: '/map/:mapName/:mapuuid/'
-    },
-    {
-      component: InProgressView,
-      path: '/progress/:vmodel?/',
-      props: true
     }
   ]
 })

@@ -6,7 +6,15 @@
       }
     },
     props: {
-      agents: Object
+      agents: {
+        type: Object,
+        default: () => {
+          // https://v2.vuejs.org/v2/guide/components-props.html
+          return {
+            def: ''
+          }
+        }
+      }
     }
   }
 </script>
@@ -23,14 +31,14 @@
           <p>Use the arrows to see a agents one by one.</p>
           <p>
             If you want you can also click on their name to find more
-            information about that specific Agent :)
+            information about that specific Agent
           </p>
           <img
             src="https://media.valorant-api.com/sprays/076630c8-4bc9-d953-eb13-6e81e341840c/animation.gif"
             alt=""
           />
         </div>
-        <template v-for="agent in test.data">
+        <template :key="agent.id" v-for="agent in test.data">
           <div class="carousel-item" data-bs-interval="1000000">
             <RouterLink
               :to="'/' + agent.uuid + '/'"
@@ -60,7 +68,7 @@
             height: 3em;
           "
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="carousel-control-prev-icon" aria-hidden="true" />
         </div>
         <span class="visually-hidden">Previous</span>
       </button>
@@ -80,7 +88,7 @@
             height: 3em;
           "
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="carousel-control-next-icon" aria-hidden="true" />
         </div>
         <span class="visually-hidden">Next</span>
       </button>

@@ -6,14 +6,21 @@
       }
     },
     props: {
-      maps: Object
+      maps: {
+        type: Object,
+        default: () => {
+          return {
+            str: ''
+          }
+        }
+      }
     }
   }
 </script>
 
 <template>
   <div v-if="test" id="map-grid">
-    <template v-for="item in test.data">
+    <template v-for="item in test.data" :key="item.displayName">
       <div>
         <RouterLink
           class="map-name"

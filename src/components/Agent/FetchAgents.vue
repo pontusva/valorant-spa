@@ -1,5 +1,5 @@
 <script>
-  import Carousel from './Carousel.vue'
+  import CarouselComponent from './CarouselComponent.vue'
   export default {
     created() {
       this.agentFetch()
@@ -19,13 +19,13 @@
       }
     },
     components: {
-      Carousel
+      CarouselComponent
     }
   }
 </script>
 
 <template>
   <div v-if="agents">
-    <Carousel :agents="agents" />
+    <CarouselComponent :agents="agents" />
   </div>
 </template>

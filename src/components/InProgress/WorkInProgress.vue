@@ -5,7 +5,10 @@
       return {}
     },
     props: {
-      vmodel: String
+      vmodel: {
+        type: String,
+        default: ''
+      }
     },
     methods: {
       toGoogle() {

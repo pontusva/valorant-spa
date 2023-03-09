@@ -26,17 +26,26 @@
         console.log(this.res)
       }
     },
-    props: ['agents']
+    props: {
+      agents: {
+        type: Object,
+        default: () => {
+          return {
+            tmp: ''
+          }
+        }
+      }
+    }
   }
 </script>
 
 <template>
   <div id="flex" v-if="res">
     <h1 id="details-abilities">
-      <span>{{ res.data.displayName }}</span
-      >, {{ res.data.role.displayName }}.
+      <p>{{ res.data.displayName }}</p>
+      , {{ res.data.role.displayName }}.
     </h1>
-    <template v-for="agent in res">
+    <template :key="agent.uuid" v-for="agent in res">
       <img
         style="position: absolute; z-index: -1; max-width: 100%"
         :src="agent.fullPortraitV2"
@@ -46,8 +55,8 @@
       <p id="role" v-if="agent.role">
         {{ agent.role.description }}
       </p>
-      <div>
-        <div v-if="agent && res" v-for="abilities in agent.abilities">
+      <div v-if="agent && res">
+        <div :key="abilities" v-for="abilities in agent.abilities">
           <p class="abilities">{{ abilities.displayName }}</p>
           <img
             class="abilitesDisplayIcons"

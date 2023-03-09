@@ -1,5 +1,5 @@
 <script>
-  import Nav from './components/Nav.vue'
+  import NavBar from './components/NavBar.vue'
 
   export default {
     created() {
@@ -15,12 +15,12 @@
       // }
     },
     components: {
-      Nav
+      NavBar
     }
   }
 </script>
 
 <template>
-  <Nav />
+  <NavBar />
   <!-- <Tester /> -->
 </template>

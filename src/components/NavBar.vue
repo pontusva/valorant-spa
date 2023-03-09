@@ -47,24 +47,24 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon" />
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul
           class="container-fluid fs-5 navbar-nav d-flex align-items-center justify-content-center me-auto mb-2 mb-lg-0"
         >
           <li class="nav-item">
-            <RouterLink class="navbar-brand nav-link fs-1" to="/"
-              >Valorant</RouterLink
-            >
+            <RouterLink class="navbar-brand nav-link fs-1" to="/">
+              Valorant
+            </RouterLink>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> </a>
+            <a class="nav-link" href="#" />
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link agent" aria-current="page" to="/agents"
-              >Agents</RouterLink
-            >
+            <RouterLink class="nav-link agent" aria-current="page" to="/agents">
+              Agents
+            </RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link agent" to="/ranks">Ranks</RouterLink>
@@ -73,9 +73,9 @@
             <RouterLink class="nav-link agent" to="/maps">Maps</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link agent" to="/weapons"
-              >Weapons</RouterLink
-            >
+            <RouterLink class="nav-link agent" to="/weapons">
+              Weapons
+            </RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link agent" to="/gear">Gear</RouterLink>
@@ -94,13 +94,13 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
                 <a class="dropdown-item" href="#">Titles</a>
-                <RouterLink class="dropdown-item" to="/titles"></RouterLink>
+                <RouterLink class="dropdown-item" to="/titles" />
               </li>
               <li>
                 <a class="dropdown-item" href="#">Sprays</a>
-                <RouterLink to="/grafitti" class="dropdown-item"
-                  >Graffiti</RouterLink
-                >
+                <RouterLink to="/grafitti" class="dropdown-item">
+                  Graffiti
+                </RouterLink>
               </li>
               <li><hr class="dropdown-divider" /></li>
               <li>
