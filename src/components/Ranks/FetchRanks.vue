@@ -41,7 +41,6 @@
         )
         const result = await response.json()
         this.ranks = result.data[0]
-        console.log(this.ranks.tiers)
       }
     }
   }

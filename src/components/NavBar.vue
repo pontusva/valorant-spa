@@ -19,7 +19,6 @@
       ...mapActions(['agentFetcher']),
       async yoyo() {
         await this.$store.dispatch('agentFetcher')
-        // console.log(this.count)
       },
       agentSearch(event) {
         event.preventDefault()
@@ -27,6 +26,12 @@
           path: `/progress/${this.formSearch}/`,
           props: ['vmodel']
         })
+      }
+    },
+    watch: {
+      formSearch(newq, oldq) {
+        console.log('old form input:', oldq)
+        console.log('new form input:', newq)
       }
     }
   }

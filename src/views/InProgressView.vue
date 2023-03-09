@@ -15,11 +15,6 @@
         vmodel: null
       }
     },
-    methods: {
-      loggers() {
-        // this.vmodel = this.$route.params
-      }
-    },
     components: {
       WorkInProgress
     }
